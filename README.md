@@ -35,17 +35,59 @@ This project forecasts the daily closing prices of the **S&P/TSX Composite Index
 
 ---
 
-## 📁 Project Structure
 
-tsx-forecasting-ml/ │ 
-├── notebooks/ # Step-by-step analysis notebooks │ 
-  ├── 1_eda_tsx_analysis.ipynb │ 
-  ├── 2_arima_modeling.ipynb │ 
-  ├── 3_feature_engineering.ipynb │ 
-  ├── 4_ml_models_forecasting.ipynb │ 
-  ├── 5_model_comparison.ipynb 
-  │ └── 6_lstm_forecasting.ipynb │ 
-├── models/  
+---
+
+## 🔬 Methodology
+
+### 1. **EDA (Exploratory Data Analysis)**
+- Visualize historical trends
+- Calculate returns and moving averages
+- Identify patterns and outliers
+
+### 2. **ARIMA Modeling**
+- Test stationarity using ADF test
+- Use `auto_arima` or manual tuning
+- Forecast next 7 days
+
+### 3. **Feature Engineering**
+- Create lag features (t-1 to t-7)
+- Rolling mean and standard deviation
+- Train/test split for ML
+
+### 4. **Machine Learning Models**
+- Linear Regression
+- Random Forest Regressor
+- XGBoost Regressor
+
+### 5. **Deep Learning (Optional)**
+- LSTM using TensorFlow/Keras
+- Reshape data and train sequence model
+
+---
+
+## 📈 Evaluation Metrics
+
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+- MAPE (Mean Absolute Percentage Error)
+- Visual comparison of predicted vs actual
+
+---
+
+## 📌 Sample Visualizations
+
+![TSX Close Forecast](plots/arima_tsx_forecast.png)
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/tsx-forecasting-ml.git
+   cd tsx-forecasting-ml
+
 ├── plots/ # Exported visualizations 
 │ └── arima_tsx_forecast.png │ 
 ├── requirements.txt # Project dependencies
