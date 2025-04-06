@@ -2,3 +2,9 @@ yfinance
 pandas
 matplotlib
 seaborn
+statsmodels
+joblib
+scikit-learn
+xgboost
+tensorflow
+pmdarima
